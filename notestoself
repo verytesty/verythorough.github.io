@@ -1,0 +1,8 @@
+To run a local build the GitHub Pages way, navigate in the Ruby command prompt to the project folder and run:
+bundle exec jekyll serve
+(You may need to add bundle exec to all jekyll commands...)
+
+If local looks different from live, jekyll may need an update.  Run:
+bundle update
+
+More info at https://help.github.com/articles/using-jekyll-with-pages
