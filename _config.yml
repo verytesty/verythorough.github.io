@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title:
-description:
+title: Jessica Parsons
+description: Portfolio and resume
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale:
@@ -15,16 +15,16 @@ sass:
 permalink: /:categories/:title/
 kramdown:
   toc_levels: 1..2
-highlighter: pygments
+highlighter: rouge
 gems:
   - jekyll-sitemap
 
 
 # Site owner
 owner:
-  name:
-  email:
-  twitter:
+  name: Jessica Parsons
+  email: verythorough@gmail.com
+  twitter: @verythorough
   google:
     ad-client: 
     ad-slot: 
