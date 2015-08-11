@@ -5,7 +5,7 @@ title: Home
 
 <div class="intro section">
   <img class="avatar" src="{{ site.baseurl }}/images/avatar240.jpg" alt="Jessica Parsons">
-  <p><span class="lead">I'm <strong>Jessica Parsons</strong>, and I build clean, semantic website systems that are easy on the eyes.</span>  I adapt quickly to new CMS platforms and coding frameworks, and strive to keep my own code neat, efficient, and free of unnecessary dependencies.  I love working with SVG, and am just discovering the joys of data visualization with d3.js.</p>
+  <p><span class="lead">I'm <strong>Jessica Parsons</strong>, and I been building beautiful, standards-based website systems since 2006.</span>  I adapt quickly to new CMS platforms and coding frameworks, and strive to keep my own code neat, efficient, and free of unnecessary dependencies.  I love working with SVG, and am just discovering the joys of data visualization with d3.js.</p>
   <p class="more-link">
   <a href="{{site.baseurl}}/index.html#about-me">More about me...</a>
 
