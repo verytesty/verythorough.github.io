@@ -1,0 +1,235 @@
+/*
+ * Theme for Very Thorough
+ * Heavily adapted from Lanyon/Poole by @mdo
+ */
+
+
+/*
+ * Contents
+ *
+ * Body resets
+ * Custom type
+ * Messages
+ * Wrapper
+ * Container
+ * Header
+ * Posts and pages
+ */
+
+
+
+
+/*
+ * Custom type
+ *
+ * Extend paragraphs with `.lead` for larger introductory text.
+ */
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: $normal;
+}
+
+
+/*
+ * Messages
+ *
+ * Show alert messages to users. You may add it to single elements like a `<p>`,
+ * or to a parent if there are multiple elements to show.
+ */
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f9f9f9;
+}
+
+/*
+ * Wrapper
+ *
+ * The wrapper is used to position site content when the sidebar is toggled. We
+ * use an outter wrap to position the sidebar without interferring with the
+ * regular page content.
+ */
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 60rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+
+/*
+ * Header
+ *
+ * Small header above the content for site name, description, and social links.
+ */
+
+header {
+  padding-top:    .5rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  background-color: $purple;
+  color: $white;
+  a {
+    color: $white;
+    font-weight: $normal;
+  }
+  .icon {
+    fill: $white;
+  }
+}
+.site-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.social-links {
+  text-align: center;
+}
+
+@media (min-width: 30em) {
+  .social-links {
+    float: right;
+  }
+}
+
+@media (max-width: 30em) {
+  .icon-label {
+    display: none;
+  }
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .social-links a:hover .icon-label {
+    display: block;
+    position: absolute;
+  }
+}
+
+
+/* Sections
+ *
+ * Divides the homepage
+ */
+
+
+/*
+ * Posts and pages
+ *
+ * Each post is wrapped in `.post` and is used on default and post layouts. Each
+ * page is wrapped in `.page` and is only used on the page layout.
+ */
+
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: $dark-teal;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: $neutral-med;
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+
+/* Projects */
+.projects {
+  text-align: center;
+}
+
+.projects .post {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-right: 2.5%;
+  margin-bottom: 1em;
+  min-width: 12em;
+}
+
+.project-thumb,
+.project-image {
+  border: 1px solid $neutral-light;
+}
+
+.more-link {
+  clear: both;
+  text-align: right;
+}
+
+.avatar {
+  float: left;
+  margin-right: 3%;
+  max-width: 9rem;
+  border-radius: 50%;
+  shape-outside: circle();
+  shape-margin: 1%;
+}
+
+.jobs .section-title,
+.education .section-title,
+.job-list,
+.ed-list {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2.5%;
+  width: 30%;
+}
+
+.job-list,
+.ed-list {
+  width: 63%;
+}
+
+/* Floats */
+.right {
+  float: right;
+  margin-left: 1.5em;
+}
+
+.left {
+  float: left;
+  margin-right: 1.5em;
+}

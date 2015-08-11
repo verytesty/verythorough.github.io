@@ -1,0 +1,58 @@
+//FONTS
+
+$sans: Roboto, HelveticaNeue, "Segoe UI", sans-serif;
+$script: "Kaushan Script", "Segoe Scipt", Gabriola, Markerfelt-Thin, sans-serif;
+
+$body-font-sz: 100%;
+$smaller-font: 87.5%;
+$bigger-font: 112.5%;
+$body-line-ht: 1.5em;
+$body-font: 300 #{$body-font-sz}/#{$body-line-ht} $sans;
+$bold: 400;
+$normal: 300;
+
+//COLORS
+$white: #fff;  //in case I decide to use a slightly off-white
+
+$neutral-dark: #444;
+$neutral-light: #ddd;
+$neutral-med: #999;
+
+$dark-teal: #034;
+$purple: #324;
+
+$togl-dk: $neutral-dark;
+$togl-lt: $white;
+
+$body-text-color: $neutral-dark;
+$highlight-color: $neutral-light;
+$header-neutral: $neutral-dark;
+$border-neutral: $neutral-med;
+
+// BREAKPOINTS (adapted from Jon Thomas)
+
+@mixin at-least($breakpoint) {
+    @media only screen and (min-width: $breakpoint) { @content; }
+}
+
+@mixin between($bp1,$bp2) {
+	@media only screen and (min-width: $bp1) and (max-width: $bp2 - 0.1) { @content; }
+}
+
+@mixin hi-res {
+	@media only screen and (min-device-width: 1400px) and (max-resolution: 1dppx) { @content; }
+}
+
+$modern: 1em;  //override ie8- styles (also mobile-first single column)
+$feed-box-side: 24em; //Feed boxes with images on side, 2-col bottom widgets
+$two-col: 30em; //2 col masonry (change script if value changes)
+$full-fonts: 29em; //return fonts from 80% to full
+$stacked-menu: 33em; //room for menu items single file left of wordmark, font to full? or sooner?
+$lady-header: 44em; //room for lady and vert header (with smaller fonts and 10em thumbs)
+$full-width: 56em; //room for multi-column boxes, 2-col certs, 1em table fonts, 3-col masonry, grad-menu
+$nice-header: 64em; //Front page header is in two lines
+$long-third: 64em; //Home third boxes lengthen from 26em to 27em
+$short-half: 78em; //Content on home half boxes shortens from 15em high to 12em
+
+//Legacy widths: Fixed widths for IE6-8. (Not for media queries)
+$legacy-wrap: 62em; //page wrap width

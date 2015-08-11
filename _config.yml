@@ -1,16 +1,13 @@
 # Permalinks
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+permalink:           /:categories/:title
 
 # Setup
 title:               Very Thorough
-tagline:             'Portfolio and resume for Jessica Parsons'
+tagline:             "Jessica Parsons's Home on the Web"
 description:         ''
 url:                 http://verythorough.github.io
 baseurl:             ''
-paginate:            5
 
 # About/contact
 author:
@@ -21,12 +18,19 @@ author:
 # Jekyll configuration
 sass:
     sass_dir: _sass
-    style: compressed
+    style: :compressed
 kramdown:
   toc_levels: 1..2
 highlighter: pygments
 gems:
   - jekyll-sitemap
-  
-# Custom vars
-version:             1.0.0
+exclude: ["notestoself", "Gemfile", "Gemfile.lock", "LICENSE.md", "README.md"]
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "projects"
+    values:
+      layout: project
+      img_type: "jpg"
