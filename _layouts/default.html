@@ -9,32 +9,7 @@
           <h1 class="site-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
           </h1>
-          <ul class="inline-list social-links">
-            <li>
-              <a href="https://www.linkedin.com/in/verythorough">
-                <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
-                <span class="icon-label">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="http://codepen.io/verythorough/">
-                <svg class="icon icon-codepen"><use xlink:href="#icon-codepen"></use></svg>
-                <span class="icon-label">Codepen</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/verythorough">
-                <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
-                <span class="icon-label">Github</span>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:verythorough@gmail.com">
-                <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-                <span class="icon-label">Email</span>
-              </a>
-            </li>
-          </ul>
+          {% include social-links.html %}
         </div>
       </header>
 
@@ -44,34 +19,7 @@
     
       <footer class="container">
         <hr class="section-divider">
-
-                  <ul class="inline-list social-links">
-            <li>
-              <a href="https://www.linkedin.com/in/verythorough">
-                <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
-                <span class="icon-label">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="http://codepen.io/verythorough/">
-                <svg class="icon icon-codepen"><use xlink:href="#icon-codepen"></use></svg>
-                <span class="icon-label">Codepen</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/verythorough">
-                <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
-                <span class="icon-label">Github</span>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:verythorough@gmail.com">
-                <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-                <span class="icon-label">Email</span>
-              </a>
-            </li>
-          </ul>
-
+        {% include social-links.html %}
       </footer>
 
     {% include svg.html %}
