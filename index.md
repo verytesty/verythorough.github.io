@@ -4,10 +4,11 @@ title: Home
 ---
 
 <div class="intro section">
-  <img class="avatar" src="{{ site.baseurl }}/images/avatar240.jpg" alt="Jessica Parsons">
-  <p><span class="lead">I'm <strong>Jessica Parsons</strong>, and I been building beautiful, standards-based website systems since 2006.</span>  I adapt quickly to new CMS platforms and coding frameworks, and strive to keep my own code neat, efficient, and free of unnecessary dependencies.  I love working with SVG, and am just discovering the joys of data visualization with d3.js.</p>
+  <img class="avatar" src="{{ site.baseurl }}/images/avatar240.jpg" alt="Jessica Parsons" />
+  <p><span class="lead">I'm <strong>Jessica Parsons</strong>, and I've been making beautiful, standards-based websites since 2006.</span>  I adapt quickly to new CMS platforms and coding frameworks, and strive to keep my own code neat, efficient, and free of unnecessary dependencies.  I love working with SVG, and am just discovering the joys of data visualization with d3.js.</p>
   <p class="more-link">
-  <a href="{{site.baseurl}}/index.html#about-me">More about me...</a>
+    <a href="{{site.baseurl}}/index.html#about-me">More about me...</a>
+  </p>
 
 </div>
 
@@ -39,16 +40,17 @@ title: Home
 
 <div class="jobs section">
   <h2 class="section-title">Experience</h2>
-  <div class="job-list" markdown="1">
-      {% include job-list.html %}
+  <div class="job-list">
+    {% include job-list.html %}
   </div>
 </div>
+
 
 <hr class="section-divider">
 
 <div class="education section">
   <h2 class="section-title">Education</h2>
-  <div class="ed-list" markdown="1">
+  <div class="ed-list">
       {% include ed-list.html %}
   </div>
 </div>

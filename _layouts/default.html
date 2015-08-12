@@ -4,7 +4,6 @@
   {% include head.html %}
 
   <body>
-    <div class="wrap">
       <header>
         <div class="container">
           <h1 class="site-title">
@@ -35,12 +34,6 @@
                 <span class="icon-label">Email</span>
               </a>
             </li>
-            <li>
-              <a href="/images/JessicaParsonsResume.pdf">
-                <svg class="icon icon-pdf"><use xlink:href="#icon-pdf"></use></svg>
-                <span class="icon-label">Resume</span>
-              </a>
-            </li>
           </ul>
         </div>
       </header>
@@ -48,7 +41,38 @@
       <div class="container content">
         {{ content }}
       </div>
-    </div>
+    
+      <footer class="container">
+        <hr class="section-divider">
+
+                  <ul class="inline-list social-links">
+            <li>
+              <a href="https://www.linkedin.com/in/verythorough">
+                <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+                <span class="icon-label">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://codepen.io/verythorough/">
+                <svg class="icon icon-codepen"><use xlink:href="#icon-codepen"></use></svg>
+                <span class="icon-label">Codepen</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/verythorough">
+                <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
+                <span class="icon-label">Github</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:verythorough@gmail.com">
+                <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                <span class="icon-label">Email</span>
+              </a>
+            </li>
+          </ul>
+
+      </footer>
 
     {% include svg.html %}
 

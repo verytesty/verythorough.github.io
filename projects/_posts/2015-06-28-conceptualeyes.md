@@ -1,12 +1,11 @@
 ---
-title: ConceptualEyes (work in progress)
+title: ConceptualEyes (work&nbsp;in&nbsp;progress)
 img_name: conceptualeyes
 img_type: gif
-project_url: verythorough.github.io/ConceptualEyes
+project_url: "https://still-lake-1682.herokuapp.com/"
+github_repo: "https://github.com/verythorough/ConceptualEyes"
 description: Single-page app built for NeoHack2015
 ---
-
-Single-page concept-mapping app built at NeoHack2015
 
 * Uses d3.js force layout to display connected concepts
 * Connects with Firebase DB for realtime concept additions (in progress)

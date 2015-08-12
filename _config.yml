@@ -20,6 +20,7 @@ sass:
     sass_dir: _sass
     style: :compressed
 kramdown:
+  auto_ids: false
   toc_levels: 1..2
 highlighter: pygments
 gems:

@@ -1,11 +1,9 @@
 ---
 title: Cañada College Fashion Department
 img_name: ccfd
-project_url: canadacollege.edu/fashion
+project_url: "https://canadacollege.edu/fashion"
 description: Custom-built WordPress site
 ---
-
-WordPress custom theme built from scratch:
 
 * My original design from concept to completion
 * Fully responsive with semantic, CSS-only drop-in menu on mobile

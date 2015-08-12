@@ -1,11 +1,10 @@
 ---
 title: Miss Petunia
 img_name: miss-petunia
-project_url: miss-petunia.com
+project_url: "http://miss-petunia.com"
+github_repo: "https://github.com/verythorough/miss-petunia"
 description: Custom tumblr theme
 ---
-
-Custom tumblr theme:
 
 * Responsive design with semantic, accessible markup
 * Hand-illustrated petunia icon

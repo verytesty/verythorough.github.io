@@ -3,14 +3,23 @@ layout: default
 ---
 
 <div class="post">
-  <img class="project-image" src="{{site.baseurl}}/images/{{ page.img_name }}.{{ page.img_type}}" alt="{{ page.title }} screenshot">
-  <h2 class="post-title">{{ page.title }}</h2>
   {% if page.project_url %}
-  <p><a href="http://{{ page.project_url }}" target="_blank">
-    {{ page.project_url }}
-  </a></p>
+  <a href="{{ page.project_url }}" target="_blank">
+    <img class="project-image" src="{{site.baseurl}}/images/{{ page.img_name }}.{{ page.img_type}}" alt="{{ page.title }} screenshot">
+  </a>
   {% endif %}
-  <p class="post-date">{{ page.date | date: '%Y' }}</p>
+  <h2 class="post-title project-title">{{ page.title }}</h2>
+  <div class="project-buttons">
+    {% if page.project_url %}
+    <a class="button project-button" href="{{ page.project_url }}" target="_blank">View Project</a>
+    {% endif %}
+    {% if page.github_repo %}
+    <a class="button project-button" href="{{ page.github_repo }}" target="_blank">GitHub Repo</a>
+    {% endif %}
+  </div>
+  {% if page.description %}
+  <p class='project-description'>{{ page.description }}:</p>
+  {% endif %}
   {{ content }}
 </div>
 <p class="more-link">
