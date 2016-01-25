@@ -4,6 +4,7 @@ published: false
 ---
 
 
+
 Sometimes it's easier to test sites on a unix variant than on Windows, but creating a VM for every project takes up more space than I have room for.  Today I created a Vagrant-DevBox directory in my user folder, and set up a Vagrantfile to make my VM work with multiple projects in my GitHub folder.  The configuration is pretty simple:
 
     Vagrant.configure(2) do |config|
@@ -13,6 +14,7 @@ Sometimes it's easier to test sites on a unix variant than on Windows, but creat
       #Forward ports as required by project
       #Localhost port for jekyll serve, used for opensmc and others
       config.vm.network "forwarded_port", guest: 4000, host: 4040
+
       #Localhost port for rails server, might be used for wwc?
       config.vm.network "forwarded_port", guest: 3000, host: 3030
 
@@ -28,5 +30,3 @@ OK, installing is more work than I expected!  I already tried once and hit a bun
 - Digital Ocean has a [nice tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-14-04) for installing Ruby and Rails via rbenv, which is apparently preferable to rvm.
 - After following those directions through the ruby (2.2.3) and bundler installs, verythorough.github.io `bundle install`ed without a hitch.  (Oh, I also rean `sudo apt-get install nodejs` before that, but I don't think that made a difference.) All that beautiful green text... :)
   - After running `bundle exec jekyll serve`, I navigated on my local machine to localhost:4040, and there was my site.  Port forwarding: check.
-
-
