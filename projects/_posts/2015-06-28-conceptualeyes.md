@@ -5,6 +5,8 @@ img_type: gif
 project_url: "https://still-lake-1682.herokuapp.com/"
 github_repo: "https://github.com/verythorough/ConceptualEyes"
 description: Single-page app built for NeoHack2015
+published: true
+tags: [experiments]
 ---
 
 * Uses d3.js force layout to display connected concepts

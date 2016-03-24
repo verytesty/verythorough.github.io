@@ -4,6 +4,7 @@ img_name: miss-petunia
 project_url: "http://miss-petunia.com"
 github_repo: "https://github.com/verythorough/miss-petunia"
 description: Custom tumblr theme
+tags: [pro_projects]
 ---
 
 * Responsive design with semantic, accessible markup

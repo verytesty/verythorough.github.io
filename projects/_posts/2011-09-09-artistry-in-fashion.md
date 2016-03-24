@@ -4,6 +4,7 @@ img_name: artistry
 project_url: "http://artistryinfashion.com"
 description: Custom WordPress child theme
 published: true
+tags: [pro_projects]
 ---
 
 
