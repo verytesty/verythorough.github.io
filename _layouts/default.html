@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-      <header>
+      <header class="site-header">
         <div class="container">
           <h1 class="site-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
@@ -16,8 +16,8 @@
       <div class="container content">
         {{ content }}
       </div>
-    
-      <footer class="container">
+
+      <footer class="site-footer container">
         <hr class="section-divider">
         {% include social-links.html %}
       </footer>

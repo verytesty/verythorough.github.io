@@ -7,7 +7,7 @@ title: Home
   <img class="avatar" src="images/avatar240.jpg" alt="Jessica Parsons" />
   <p><span class="lead">I'm <strong>Jessica Parsons</strong>, and I've been professionally coding for the web since 2006.</span> My extensive knowledge
   of HTML, CSS, and SVG makes it easy for me to adapt to new frameworks and
-  CMS platforms, ensuring wherever possible that the markup they generate is semantic, efficient, and accessible.</p>
+  CMS platforms, ensuring wherever possible that the markup they generate is semantic, efficient, and accessible.  As a former teacher, I love sharing knowledge with others, and am currently working towards a career teaching underrepresented groups to code.</p>
   <p class="more-link">
     <a href="#about-me">More about me...</a>
   </p>

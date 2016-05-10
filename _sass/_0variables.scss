@@ -1,6 +1,6 @@
 //FONTS
 
-$sans: Roboto, HelveticaNeue, "Segoe UI", sans-serif;
+$sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
 $script: "Kaushan Script", "Segoe Scipt", Gabriola, Markerfelt-Thin, sans-serif;
 
 $body-font-sz: 100%;
@@ -20,12 +20,12 @@ $neutral-med: #999;
 
 $teal: #067;
 $dark-teal: #034;
+$lt-teal: #abc;
 $purple: #324;
 $lt-purple: #436;
 
 $body-text-color: $neutral-dark;
 $body-link-color: $lt-purple;
-$body-link-dark: $purple;
 $highlight-color: $neutral-light;
 $header-neutral: $neutral-dark;
 $border-neutral: $neutral-med;
@@ -45,15 +45,9 @@ $border-neutral: $neutral-med;
 }
 
 $modern: 1em;  //override ie8- styles (also mobile-first single column)
-$feed-box-side: 24em; //Feed boxes with images on side, 2-col bottom widgets
 $two-col: 30em; //2 col masonry (change script if value changes)
-$full-fonts: 29em; //return fonts from 80% to full
 $stacked-menu: 33em; //room for menu items single file left of wordmark, font to full? or sooner?
-$lady-header: 44em; //room for lady and vert header (with smaller fonts and 10em thumbs)
 $full-width: 56em; //room for multi-column boxes, 2-col certs, 1em table fonts, 3-col masonry, grad-menu
-$nice-header: 64em; //Front page header is in two lines
-$long-third: 64em; //Home third boxes lengthen from 26em to 27em
-$short-half: 78em; //Content on home half boxes shortens from 15em high to 12em
 
 //Legacy widths: Fixed widths for IE6-8. (Not for media queries)
 $legacy-wrap: 62em; //page wrap width

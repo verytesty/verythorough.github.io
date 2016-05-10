@@ -1,24 +1,21 @@
 ---
 layout: default
-title: Projects
+title: Blog
 ---
 
-<div class="projects section">
+<div class="section">
 
   <h1 class="page-title">{{ page.title }}</h1>
 
-  <p>Click on a screenshot for more information.</p>
-
   <div class="posts">
-    {% for post in site.categories.projects %}
+    {% for post in site.categories.blog %}
     <div class="post">
-      <h3 class="post-title">
+      <h2 class="post-title">
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <img class="project-thumb" src="{{ site.baseurl }}/images/{{ post.img_name }}-thumb.{{ post.img_type }}"
-            alt="{{ post.title }} screenshot">
           {{ post.title }}
         </a>
-      </h3>
+      </h2>
+      <span class="post-date">{{ page.date | date_to_string }}</span>
       <p class="post-description">{{ post.description }}</p>
     </div>
     {% endfor %}
