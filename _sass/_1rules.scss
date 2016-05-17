@@ -73,6 +73,9 @@
       background: linear-gradient(rgba(255,255,255,0.25), rgba(0,0,0,0) 80%) no-repeat;
     }
   }
+  .social-links {
+    float: right;
+  }
   .icon {
     fill: $white;
   }
@@ -80,6 +83,7 @@
 
 .site-footer {
   margin-top: 1.5em;
+  text-align: center;
   .icon {
     display: block;
     margin: auto;
@@ -97,14 +101,10 @@
 }
 
 .social-links {
-  text-align: center;
   font-size: 1.125em;
 }
 
-@media (min-width: 30em) {
-  .site-header .social-links {
-    float: right;
-  }
+@media (min-width: 34em) {
   .site-header .icon {
     height: .9em;
     width: 1em;
