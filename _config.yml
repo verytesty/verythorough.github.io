@@ -6,13 +6,14 @@ permalink:           /:categories/:title
 title:               Very Thorough
 tagline:             "Jessica Parsons's Home on the Web"
 description:         ''
-url:                 http://verythorough.github.io
+url:                 https://verythorough.com
+enforce_ssl:         verythorough.com
 baseurl:             ''
 
 # About/contact
 author:
   name:              Jessica Parsons
-  url:               http://verythorough.github.io
+  url:               https://verythorough.com
   email:             verythorough@gmail.com
 
 # Jekyll configuration

@@ -12,6 +12,14 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+  
+  <script type="text/javascript">
+    var host = "verythorough.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+  </script>
+  
+  <link rel="canonical" href=" {{ site.url }}{{ page.url }}" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
