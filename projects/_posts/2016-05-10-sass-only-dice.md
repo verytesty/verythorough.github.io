@@ -1,6 +1,6 @@
 ---
-title: Sass Die Cube
-img_name: sass-die-cube
+title: Sass Only Dice
+img_name: sass-only-dice
 img_type: png
 project_url: "http://codepen.io/verythorough/pen/EKevRe?editors=1100"
 description: Six empty divs turned into an animated 3D die using only CSS (Sass)

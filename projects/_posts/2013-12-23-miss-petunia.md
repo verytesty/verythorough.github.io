@@ -7,8 +7,8 @@ description: Custom tumblr theme
 tags: [pro_projects]
 ---
 
-* Responsive design with semantic, accessible markup
-* Hand-illustrated petunia icon
-* Javascript sharing buttons
-* Disqus integration
-* Ported the theme with new background, fonts, and icons to build <a href="http://mr-monty.com">Mr. Monty</a> tumblr in 2014
+* Responsive design with semantic, accessible markup.
+* Hand-illustrated petunia icon.
+* JavaScript sharing buttons.
+* Disqus integration.
+* Ported the theme with new background, fonts, and icons to build <a href="http://mr-monty.com">Mr. Monty</a> tumblr in 2014.

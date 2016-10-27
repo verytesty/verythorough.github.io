@@ -28,5 +28,5 @@ OK, installing is more work than I expected!  I already tried once and hit a bun
 - To log in to vagrant's vm as root, do `vagrant ssh` as usual, then run `su -` and enter the password (default "vagrant"). The username will then be `root@vagrant-ubuntu-trusty-64`.
 - To return to the regular vagrant user from root, run `exit`.
 - Digital Ocean has a [nice tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-14-04) for installing Ruby and Rails via rbenv, which is apparently preferable to rvm.
-- After following those directions through the ruby (2.2.3) and bundler installs, verythorough.github.io `bundle install`ed without a hitch.  (Oh, I also rean `sudo apt-get install nodejs` before that, but I don't think that made a difference.) All that beautiful green text... :)
+- After following those directions through the ruby (2.2.3) and bundler installs, verythorough.github.io `bundle install`ed without a hitch.  (Oh, I also ran `sudo apt-get install nodejs` before that, but I don't think that made a difference.) All that beautiful green text... :)
   - After running `bundle exec jekyll serve`, I navigated on my local machine to localhost:4040, and there was my site.  Port forwarding: check.
