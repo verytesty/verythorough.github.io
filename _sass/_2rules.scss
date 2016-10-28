@@ -76,7 +76,7 @@
   .social-links {
     float: right;
   }
-  .icon {
+  .icon, .icon svg {
     fill: $white;
   }
 }
@@ -221,20 +221,10 @@
   .project-buttons {
     float: right;
   }
+}
 
-  .jobs .section-title,
-  .education .section-title,
-  .job-list,
-  .ed-list {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 2.5%;
-    width: 20%;
-  }
-  .job-list,
-  .ed-list {
-    width: 73%;
-  }
+.jump-links {
+  text-align: center;
 }
 
 .more-link {
