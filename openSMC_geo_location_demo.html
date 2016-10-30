@@ -1,0 +1,192 @@
+<html>
+  <head>
+    <title>Open SMC Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+     <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15.10/themes/css/cartodb.css" />
+    <style>
+    #map-container {
+      position: relative;
+    }
+    #layer-controls {
+      text-transform: uppercase;
+      color: #666;
+      font-family: Helvetica, Arial;
+      position: absolute;
+      right: 400px;
+      top: 20px;
+      border: 1px solid #999;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+      padding: 10px;
+    }
+    #layer-controls .label-text {
+      font-size: 10px;
+      font-weight: bold;
+      /*padding-left: 35px;*/
+    }
+    #layer-controls h3 {
+      margin-top: 0;
+      font-size: 11px;
+    }
+    .switch {
+      position: relative;
+      display: block;
+      /*width: 30px;
+      height: 15px;
+      margin-bottom: 10px;*/
+    }
+    .switch:last-child {
+      margin-bottom: 0;
+    }
+    div.cartodb-legend.category ul li .bullet {
+      border-radius: 0;
+      width: 1em;
+    }
+    /*.switch input {display:none;}
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      background-color: #ccc;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 1px;
+      bottom: 1px;
+      border-radius: 50%;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(15px);
+    }*/
+
+    </style>
+  </head>
+  <body>
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="layer-controls">
+        <h3>Toggle layers</h3>
+        <label class="switch">
+          <input type="radio" value="0" name="layer-to-enable" checked>
+          <!-- <div class="slider"></div> -->
+          <span class="label-text">Bees</span>
+        </label>
+        <label class="switch">
+          <input type="radio" value="1" name="layer-to-enable">
+          <!-- <div class="slider"></div> -->
+          <span class="label-text">Birds</span>
+        </label>
+        <label class="switch">
+          <input type="radio" value="2" name="layer-to-enable">
+          <!-- <div class="slider"></div> -->
+          <span class="label-text">Beans</span>
+        </label>
+      </div>
+    </div>
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15.10/cartodb.js"></script>
+    <script>
+// get the viz.json url from the CARTO Editor
+// - click on visualize
+// - create new visualization
+// - make visualization public
+// - click on publish
+// - go to API tab
+// var customControl =  L.Control.extend({
+// 
+//   options: {
+//     position: 'topleft'
+//   },
+// 
+//   onAdd: function (map) {
+//     var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+// 
+//     container.style.backgroundColor = 'white';     
+//     container.style.backgroundImage = "url(http://t1.gstatic.com/images?q=tbn:ANd9GcR6FCUMW5bPn8C4PbKak2BJQQsmC-K9-mbYBeFZm1ZM2w2GRy40Ew)";
+//     container.style.backgroundSize = "30px 30px";
+//     container.style.width = '30px';
+//     container.style.height = '30px';
+// 
+//     container.onclick = function(){
+//       console.log('buttonClicked');
+//     }
+// 
+//     return container;
+//   }
+// });
+
+function detectUserLocationAndZoom(map) {
+  if (navigator.geolocation) {
+    var timeoutVal = 10 * 1000 * 1000;
+    navigator.geolocation.watchPosition(
+      function(position) {
+        var UPPER_LEFT_CORNER_LAT=37.8;
+        var UPPER_LEFT_CORNER_LON=-122.8;
+        var LOWER_RIGHT_CORNER_LAT=37.1;
+        var LOWER_RIGHT_CORNER_LON=-121.5;
+        var lon = position.coords.longitude;
+        var lat = position.coords.latitude;
+        // If user is within the bay area as defined by the above
+        // coordinates, zoom in on his/her location.
+        if (LOWER_RIGHT_CORNER_LAT < lat &&
+            UPPER_LEFT_CORNER_LAT > lat &&
+            UPPER_LEFT_CORNER_LON < lon &&
+            LOWER_RIGHT_CORNER_LON > lon) {
+          map.setView(new L.LatLng(lat,lon), 12);
+          new L.CircleMarker([lat,lon],{radius: 4}).addTo(map);
+        }
+      }, 
+      function() {},
+      { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+    );
+  }
+}
+
+window.onload = function() {
+  // Utility function for showing a map layer.
+  function showlayer(vis, e) {
+    vis.getLayers()[1].getSubLayer(0).hide();
+    vis.getLayers()[1].getSubLayer(1).hide();
+    vis.getLayers()[1].getSubLayer(2).hide();
+    vis.getLayers()[1].getSubLayer(e).show();
+  };
+  // Create Map
+  cartodb.createVis('map', 'https://opensmc.carto.com/api/v2/viz/71e3c5bc-9014-11e6-9b53-0e233c30368f/viz.json')
+  .on('done', function(vis, layers) {
+    // Set initial state of the map
+    var map = vis.getNativeMap();
+    // map.addControl(new customControl());
+    detectUserLocationAndZoom(map);
+    showlayer(vis, 0);
+    $('#layer-controls').on('change', 'input', function(e) {
+      var layerSelector = e.currentTarget;
+      var layerToOpen = $(layerSelector).val();
+      showlayer(vis, layerToOpen);
+    });
+  });
+}
+    </script>
+  </body>
+</html>
