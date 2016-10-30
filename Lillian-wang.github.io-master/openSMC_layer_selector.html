@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Open SMC Map</title>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <style>
+    #map-container {
+      position: relative;
+    }
+    #layer-controls {
+      text-transform: uppercase;
+      color: #666;
+      font-family: Helvetica, Arial;
+      position: absolute;
+      right: 400px;
+      top: 20px;
+      border: 1px solid #999;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+      padding: 10px;
+    }
+    #layer-controls .label-text {
+      font-size: 10px;
+      font-weight: bold;
+      padding-left: 35px;
+    }
+    #layer-controls h3 {
+      margin-top: 0;
+      font-size: 11px;
+    }
+    .switch {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 15px;
+      margin-bottom: 10px;
+    }
+    .switch:last-child {
+      margin-bottom: 0;
+    }
+    .switch input {display:none;}
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      background-color: #ccc;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 1px;
+      bottom: 1px;
+      border-radius: 50%;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(15px);
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="layer-controls">
+        <h3>Toggle layers</h3>
+        <label class="switch">
+          <input type="radio" value="0" name="layer-to-enable" checked>
+          <div class="slider"></div>
+          <span class="label-text">Chicken</span>
+        </label>
+        <label class="switch">
+          <input type="radio" value="1" name="layer-to-enable">
+          <div class="slider"></div>
+          <span class="label-text">Bees</span>
+        </label>
+        <label class="switch">
+          <input type="radio" value="2" name="layer-to-enable">
+          <div class="slider"></div>
+          <span class="label-text">Gardens</span>
+        </label>
+      </div>
+    </div>
+<script src="./cartodb.js"></script>
+    <script>
+// get the viz.json url from the CARTO Editor
+// - click on visualize
+// - create new visualization
+// - make visualization public
+// - click on publish
+// - go to API tab
+
+window.onload = function() {
+  // Utility function for showing a map layer.
+  function showlayer(vis, e) {
+    vis.getLayers()[1].getSubLayer(0).hide();
+    vis.getLayers()[1].getSubLayer(1).hide();
+    vis.getLayers()[1].getSubLayer(2).hide();
+    vis.getLayers()[1].getSubLayer(e).show();
+  };
+  // Create Map
+  cartodb.createVis('map', 'https://opensmc.carto.com/api/v2/viz/71e3c5bc-9014-11e6-9b53-0e233c30368f/viz.json')
+  .on('done', function(vis, layers) {
+    // Set initial state of the map
+    showlayer(vis, 0);
+    $('#layer-controls').on('change', 'input', function(e) {
+      var layerSelector = e.currentTarget;
+      var layerToOpen = $(layerSelector).val();
+      showlayer(vis, layerToOpen);
+    });
+  });
+}
+    </script>
+  </body>
+</html>
