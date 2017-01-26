@@ -13,12 +13,21 @@ title: Home
     <a href="#about-me">More about me...</a>
   </p> -->
   <nav class="jump-links" id="jump-links">
-    <a class="button" href="#projects">Projects</a>
     <a class="button" href="#skills">Skills</a>
+    <a class="button" href="#projects">Projects</a>
     <a class="button" href="#jobs">Experience</a>
     <a class="button" href="#education">Education</a>
     <a class="button" href="#about-me">About&nbsp;Me</a>
   </nav>
+</div>
+
+<hr class="section-divider">
+
+<div class="skills section" id="skills">
+  <h2 class="section-title">Key Skills</h2>
+  <ul class="skills-list">
+    {% include skills-list.html %}
+  </ul>
 </div>
 
 <hr class="section-divider">
@@ -67,15 +76,6 @@ title: Home
   <p class="more-link">
     <a href="{{site.baseurl}}/projects/">More projects...</a>
   </p>
-</div>
-
-<hr class="section-divider">
-
-<div class="skills section" id="skills">
-  <h2 class="section-title">Key Skills</h2>
-  <ul class="skills-list">
-    {% include skills-list.html %}
-  </ul>
 </div>
 
 <hr class="section-divider">
