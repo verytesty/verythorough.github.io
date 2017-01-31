@@ -1,8 +1,9 @@
 ---
 layout: post
+permalink: ''
 published: false
-permalink: ""
 title: Manual DNS Fun
+date: 2017-01-31T03:25:43.372Z
 ---
 
 Today I had to set up the DNS MX records for OpenSMC, changing them to point to google.  I've managed DNS many times before via domain registrar consoles, but the registration for opensmc.org was on our server admin's personal account, and he preferred to roll his own DNS anyway.  So, now I got to figure out how to manually change a zone record.
