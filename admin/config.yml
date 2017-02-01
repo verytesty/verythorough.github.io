@@ -33,7 +33,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: "general"
         label: "General settings"
-        file: "_settings/general.json"
+        file: "whatever.yml"
         fields:
           - {label: "Main site title", name: "site_title", widget: "string"}
           - {label: "Number of fronpage posts", name: "post_count", widget: "number"}
